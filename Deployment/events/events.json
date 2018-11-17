@@ -1,0 +1,65 @@
+
+{
+  "events": [
+    {
+      "event_id": "e_1",
+      "title": "The Cathedrals Christmas Carols ",
+      "blurb": "Thousands gather together to sing their hearts out in pure joy in the name of Christmas",
+      "date": "2017-12-24T19:00:00Z",
+      "url": "https://www.durhamcathedral.co.uk/whatson",
+      "venue": {
+        "name": "Durham Cathedral",
+        "postcode": "DH1 3RW",
+        "town": "Durham",
+        "url": "https://www.durhamcathedral.co.uk/whatson",
+        "icon": "https://www.millgranary.co.uk/Portals/0/xBlog/uploads/2016/9/12/durham-cathedral.jpg",
+        "venue_id": "v_1"
+      }
+    },
+    {
+      "event_id": "e_2",
+      "title": "Durham City's Traditional Christmas Festival",
+      "blurb": "Durham City’s Traditional Christmas Festival returns again this year.  Based around the Cathedral and Castle, as well as other city centre locations, it provides excellent Christmas shopping opportunities alongside festive entertainment.",
+      "date": "2018-11-30T20:00:00Z",
+      "url": "https://www.thisisdurham.com/whats-on/durham-citys-traditional-christmas-festival-p763321",
+      "venue": {
+        "name": "Durham City Centre",
+        "postcode": "DH1 3NE",
+        "town": "Durham",
+        "url": "https://www.thisisdurham.com/explore-durham/durham-city",
+        "icon": "http://www.burnscoachtours.co.uk/images/DurhamXmas.jpg",
+        "venue_id": "v_2"
+      }
+    },
+    {
+      "event_id": "e_3",
+      "title": "Natural History Museum Ice Rink",
+      "blurb": "The Natural History Museum is home to London’s most enchanting ice rink, thanks to the beautiful backdrop of Alfred Waterhouse's buildings, a row of trees dripping in fairy lights and a majestic Christmas tree in the middle of the ice. It's become a London Christmas classic. This year, the rink will provide the usual festive fun on its perimeter: Hotel Chocolat will be in attendance, serving luxurious hot chocolates, while an indoor Café Bar and viewing balcony is open to all and overlooks the ice. See the website for wheelchair-user sessions. Booking is recommended.",
+      "date": "2018-01-07T16:00:00Z",
+      "url": "http://www.nhm.ac.uk/visit/exhibitions/ice-rink.html",
+      "venue": {
+        "name": "Natural History Museum",
+        "postcode": "SW7 5BD",
+        "town": "London",
+        "url": "https://www.timeout.com/london/things-to-do/natural-history-museum-ice-rink-4",
+        "icon": "https://media.timeout.com/images/104010789/1372/772/image.jpg",
+        "venue_id": "v_3"
+      }
+    },
+    {
+      "event_id": "e_4",
+      "title": "The Polar Express",
+      "blurb": "When a doubting young boy takes an extraordinary train ride to the North Pole, he embarks on a journey of self-discovery that shows him that the wonder of life never fades for those who believe.​",
+      "date": "2017-12-13T17:00:00Z",
+      "url": "https://www.skiddle.com/whats-on/Newcastle-on-Tyne/Centre-For-Life/The-Polar-Express-Journey-to-the-North-Pole-/13101116/",
+      "venue": {
+        "name": "Centre for Life Cinema",
+        "postcode": "NE1 4EP",
+        "town": "Newcastle",
+        "url": "https://www.skiddle.com/whats-on/Newcastle-on-Tyne/Centre-For-Life/The-Polar-Express-Journey-to-the-North-Pole-/13101116/",
+        "icon": "https://d31fr2pwly4c4s.cloudfront.net/e/5/9/1007659_1_the-polar-express-journey-to-the-north-pole-_400.jpg",
+        "venue_id": "v_4"
+      }
+    }
+  ]
+}
