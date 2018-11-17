@@ -1,5 +1,0 @@
-IBM cloud blue mix cloud development Link:
-
-https://christmasevents.eu-gb.mybluemix.net/index.html
-
-Admin and login pages are accessible via the links shown in the video or by adding the relevant extensions to the url...
