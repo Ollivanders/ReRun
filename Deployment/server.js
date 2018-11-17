@@ -15,7 +15,7 @@ users = [ // located at base/auth, check questions and chat
     {
         "user": "1",
         "username": "JohnWick",
-        "password": "abc123",
+        "password": "youkilledmydog",
     },
     {
         "user": "2",
