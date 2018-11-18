@@ -1,10 +1,10 @@
 $(document).ready(function () { // displays all current events when page fully loaded due to .read()
-    render();
+    render($('#numberNodes').val(), $('#size').val());
 });
 
 $("#renderButton").click(function () {
     document.getElementById("mapContainer").innerHTML = "";
-    render();
+    render($('#numberNodes').val(), $('#size').val());
 });
 
 $("#addRowButton").click(function () {
@@ -47,7 +47,7 @@ function extraRow() { // load events that meet the criteria
     });
 };
 
-function render(){
+function render(numberNodes, distanceParameter){
     // Instantiate a map and platform object:
     var platform = new H.service.Platform({
         'app_id': 'q68gRNG9rPpTxQaxg1V9',
@@ -58,40 +58,40 @@ function render(){
     var defaultLayers = platform.createDefaultLayers();
 
 // Instantiate the map:
+    var latitude = -18.91384189115233;
+    var longitude = 47.52399166205828;
     var map = new H.Map(
         document.getElementById('mapContainer'),
         defaultLayers.normal.map,
         {
             zoom: 20,
-            center: { lat: 54.7767600, lng: -1.5756600 }
+            center: { lat: latitude, lng: longitude }
         });
 
-    var distance = 0.05;
-    var n_waypoints = 5;
+    var distance = 0.005 * parseFloat(distanceParameter);
+    var n_waypoints = Number(numberNodes);
     initial_random_angle = 2*Math.PI*Math.random();
     var waypoints = [];
-    var waypoint0 = [54.7767600,-1.5756600];
+    var waypoint0 = [latitude, longitude];
     waypoints.push(waypoint0);
     var previous_waypoint = [waypoint0[0], waypoint0[1]];
-    var random_1;
-    var random_2;
-
+    var Random_Angle = Math.random()*2*Math.PI
+    //waypoints.push([waypoint0[0]+ distance*Math.sin(Random_Angle), waypoint0[1]+ distance*Math.cos(Random_Angle)])
+    var Angle = 2*Math.PI/n_waypoints
     for (var i = 1; i < n_waypoints; i++) {
-        random_1 = distance * (2* Math.random()-1);
-        random_2 = distance * (2* Math.random()-1);
-        var long = previous_waypoint[0] + random_1;
-        var lat = previous_waypoint[1] + random_2;
+        var long = previous_waypoint[0] + distance*Math.sin(i*Angle+Random_Angle);
+        var lat = previous_waypoint[1] + distance*Math.cos(i*Angle+Random_Angle);
         var temp_waypoint = [long, lat];
         waypoints.push(temp_waypoint);
         previous_waypoint = [temp_waypoint[0], temp_waypoint[1]];
     };
-    //waypoints.push([waypoint0[0] +0.00000000000001, waypoint0[1] + 0.00000000000001]);
+    waypoints.push([waypoint0[0] +0.00000000000001, waypoint0[1] + 0.00000000000001]);
 
     var routingParameters = {
         'mode': 'balanced;pedestrian',
     };
 
-    for (var i = 0; i < (n_waypoints); i++) {
+    for (var i = 0; i < (n_waypoints + 1); i++) {
         var waypointIndex = waypoints[i];
         long = waypointIndex[0];
         lat = waypointIndex[1];
@@ -99,7 +99,6 @@ function render(){
     }
 
     routingParameters['representation'] = 'display';
-
 // Define a callback function to process the routing response:
     var onResult = function(result) {
         var route,
@@ -126,9 +125,15 @@ function render(){
             startPoint = route.waypoint[0].mappedPosition;
             //endPoint = route.waypoint[n_waypoints].mappedPosition;
 
+            var colors = ['red', 'orange', 'yellow'];
+
+            //var color =  colors[Math.floor(Math.random()*colors.length)];
+            var color =  'blue';
+
+
             // Create a polyline to display the route:
             var routeLine = new H.map.Polyline(linestring, {
-                style: { strokeColor: 'orange', lineWidth: 10 },
+                style: { strokeColor: color, lineWidth: 10 },
                 arrows: { fillColor: 'white', frequency: 2, width: 0.8, length: 0.7 }
 
             });
@@ -151,7 +156,6 @@ function render(){
             // Set the map's viewport to make the whole route visible:
             map.setViewBounds(routeLine.getBounds());
 
-            /*
             $.ajax({
                 url : 'https://route.api.here.com/routing/7.2/calculateroute',
                 type : 'GET',
@@ -171,106 +175,16 @@ function render(){
                     }
                 }
             });
-*/
+
         }
     };
 
-    var onResult2 = function(result) {
-        var route,
-            routeShape,
-            startPoint,
-            endPoint,
-            linestring;
-        if(result.response.route) {
-            // Pick the first route from the response:
-            route = result.response.route[0];
-            // Pick the route's shape:
-            routeShape = route.shape;
 
-            // Create a linestring to use as a point source for the route line
-            linestring = new H.geo.LineString();
-
-            // Push all the points in the shape into the linestring:
-            routeShape.forEach(function(point) {
-                var parts = point.split(',');
-                linestring.pushLatLngAlt(parts[0], parts[1]);
-            });
-
-            // Retrieve the mapped positions of the requested waypoints:
-            startPoint = route.waypoint[0].mappedPosition;
-            //endPoint = route.waypoint[n_waypoints].mappedPosition;
-
-            // Create a polyline to display the route:
-            var routeLine = new H.map.Polyline(linestring, {
-                style: { strokeColor: 'red', lineWidth: 10 },
-                arrows: { fillColor: 'white', frequency: 2, width: 0.8, length: 0.7 }
-
-            });
-
-            // Create a marker for the start point:
-            var startMarker = new H.map.Marker({
-                lat: startPoint.latitude,
-                lng: startPoint.longitude
-            });
-
-            // Create a marker for the end point:
-            // var endMarker = new H.map.Marker({
-            //    lat: endPoint.latitude,
-            //    lng: endPoint.longitude
-            //});
-
-            // Add the route polyline and the two markers to the map:
-            map.addObjects([routeLine]);
-
-            // Set the map's viewport to make the whole route visible:
-            map.setViewBounds(routeLine.getBounds());
-
-            /*
-            $.ajax({
-                url : 'https://route.api.here.com/routing/7.2/calculateroute',
-                type : 'GET',
-                data : {
-                    'app_id': 'q68gRNG9rPpTxQaxg1V9',
-                    'app_code': '7_c59N78SaUc6fdI4NSR6w',
-                    routingParameters
-                },
-                dataType: 'json',
-                //The response from the server
-                'success' : function(data) {
-                    //You can use any jQuery/JavaScript here!!!
-                    if (data == "success") {
-                        console.log('yo')
-                        var run_length = data.route[0].summary.distance;
-                        console.log(run_length)
-                    }
-                }
-            });
-*/
-        }
-    };
-
-    var routeBackParameters = {
-        'mode': 'balanced;pedestrian',
-    };
-
-    routeBackParameters['waypoint0'] = 'geo!' + waypoints[n_waypoints-1][0] + ',' + waypoints[n_waypoints-1][1];
-    routeBackParameters['waypoint1'] = 'geo!' + waypoints[0][0] + ',' + waypoints[0][1];
-
-    routeBackParameters['representation'] = 'display';
-
-// Get an instance of the routing service:
     var router = platform.getRoutingService();
 
-// Call calculateRoute() with the routing parameters,
-// the callback and an error callback function (called if a
-// communication error occurs):
     router.calculateRoute(routingParameters, onResult,
         function(error) {
             alert(error.message);
         });
 
-    router.calculateRoute(routeBackParameters, onResult2,
-       function(error) {
-            alert(error.message);
-       });
 }

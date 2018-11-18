@@ -1,13 +1,182 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+    <title>ReRun - Realise your run</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=" viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap core CSS -->
+    <link href="/Grayscale/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for Grayscale template -->
+    <link href="/Grayscale/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet"
+          type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Cabin:700' rel='stylesheet' type='text/css'>
+
+    <!-- CSS for template -->
+    <link href="/Grayscale/css/grayscale.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
+    <!-- Jquery unconventionally in the header because scripts in the middle of the page require it pre-loaded-->
     <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
             type="text/javascript" charset="utf-8"></script>
     <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js"
             type="text/javascript" charset="utf-8"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="/Grayscale/vendor/jquery/jquery.min.js"></script>
+
+    <script src="/jquery.spinner.js"></script>
+    <link href="/bootstrap-spinner.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/grayscale.min.css" rel="stylesheet">
 </head>
-<body>
-<div style="width: 840px; height: 480px" id="mapContainer"></div>
-<script type="text/javascript" src="/js/routing.js"></script>
+<body id="page-top">
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
+    <div class="container">
+        <a class="navbar-brand js-scroll-trigger" href="#page-top">ReRun</a>
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <button id="loginButton" type="submit" style="float:right;" class="btn">Login</button>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                        <input id="username" type="text" class="form-control" name="username"
+                               placeholder="Username">
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                        <input id="password" type="password" class="form-control" name="password"
+                               placeholder="Password">
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Intro Header -->
+<header class="masthead">
+    <div class="intro-body">
+        <div class="container" style="padding-top:150px">
+            <div class="row">
+                <div class="col-lg-8 mx-auto" style="text-shadow: 2px 2px 4px black;">
+                    <h3 class="brand-heading">ReRun</h3>
+                    <h3 class="brand=heading">Realise your run</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Events Display -->
+<div class="container-fluid text-center" style="background-color: navajowhite">
+    <div class="form-group " align="center">
+    <div style="width: 1200px; height: 500px" id="mapContainer"></div>
+        <div>
+            <button id="renderButton" type="submit" class="btn btn-default">Render</button>
+        </div>
+    </div>
+    <div class="input-append spinner" data-trigger="spinner" text-align = center>
+        <input id="numberNodes" type="text" value="1" data-rule="quantity">
+        <div class="add-on"> <a href="javascript:;" class="spin-up" data-spin="up"><i class="icon-sort-up"></i></a> <a href="javascript:;" class="spin-down" data-spin="down"><i class="icon-sort-down"></i></a> </div>
+    </div>
+    <div class="input-append spinner" data-trigger="spinner" text-align = center>
+        <input id="size" type="text" value="1" data-rule="quantity">
+        <div class="add-on"> <a href="javascript:;" class="spin-up" data-spin="up"><i class="icon-sort-up"></i></a> <a href="javascript:;" class="spin-down" data-spin="down"><i class="icon-sort-down"></i></a> </div>
+    </div>
+</div>
+
+<!-- Contact Section -->
+<section class="contact-section bg-black">
+    <div class="container">
+
+        <div class="row">
+
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-map-marked-alt text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Address</h4>
+                        <hr class="my-4">
+                        <div class="medium text-black-50">DH1 2JR, 38 Sherburn Code, Durham, Durham</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-envelope text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Email</h4>
+                        <hr class="my-4">
+                        <div class="small text-black-50">
+                            <a href="#">help@rerun.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4 mb-3 mb-md-0">
+                <div class="card py-4 h-100">
+                    <div class="card-body text-center">
+                        <i class="fas fa-mobile-alt text-primary mb-2"></i>
+                        <h4 class="text-uppercase m-0">Phone</h4>
+                        <hr class="my-4">
+                        <div class="small text-black-50">+44 7564 912 273</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="social d-flex justify-content-center">
+            <a href="#" class="mx-2">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="mx-2">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="mx-2">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Jquery import from local file and Javascript for bootstrap -->
+<script type="text/javascript" src="/Grayscale/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Jquery, cookie and datePicker Javascript files -->
+<script type="text/javascript" src="/Grayscale/vendor/jquery-easing/jquery.easing.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+
+<!-- JavaScript for custom template with personal client additons -->
+<script type="text/javascript" src="/js/client2.js"></script>
+<script type="text/javascript" src="/Grayscale/js/grayscale.js"></script>
+<!-- Bootstrap core JavaScript -->
+
+<!-- Personal Scripts -->
 </body>
+
 </html>
