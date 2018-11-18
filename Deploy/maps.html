@@ -1,16 +1,29 @@
 <html>
 <head>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
-    <add name="Access-Control-Allow-Headers" value="*" />
-    <add name="Access-Control-Allow-Methods" value="*" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"
+            type="text/javascript"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
+            type="text/javascript" charset="utf-8"></script>
+    <script src="http://js.api.here.com/v3/3.0/mapsjs-service.js"
+            type="text/javascript" charset="utf-8"></script>
 </head>
 <body>
 <div style="width: 640px; height: 480px" id="mapContainer"></div>
 
-<script src="http://js.api.here.com/v3/3.0/mapsjs-core.js"
-        type="text/javascript" charset="utf-8"></script>
-<script src="http://js.api.here.com/v3/3.0/mapsjs-service.js"
-        type="text/javascript" charset="utf-8"></script>
-<script type="text/javascript" src="./js/client.js"></script>
+<div id="x"></div>
+<script type="text/javascript" >
+
+    var img = $("<img />").attr('src', 'https://image.maps.api.here.com/mia/1.6/mapview?app_id=QiFKebd8bcnRbZGEcwld&app_code=ze8W4nLeImVYnd5skk6xJw')
+        .on('load', function() {
+            if (!this.complete || typeof this.naturalWidth == "undefined" || this.naturalWidth == 0) {
+                alert('broken image!');
+            } else {
+                $("#something").append(img);
+            }
+        });
+</script>
+
+<script type="text/javascript" src="./js/routing.js"></script>
 </body>
 </html>
