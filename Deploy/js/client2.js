@@ -58,8 +58,8 @@ function render(numberNodes, distanceParameter){
     var defaultLayers = platform.createDefaultLayers();
 
 // Instantiate the map:
-    var latitude = -18.91384189115233;
-    var longitude = 47.52399166205828;
+    var latitude = -33.877399924680944;
+    var longitude = 151.2162025612173;
     var map = new H.Map(
         document.getElementById('mapContainer'),
         defaultLayers.normal.map,
@@ -156,15 +156,16 @@ function render(numberNodes, distanceParameter){
             // Set the map's viewport to make the whole route visible:
             map.setViewBounds(routeLine.getBounds());
 
+            /*
             $.ajax({
-                url : 'https://route.api.here.com/routing/7.2/calculateroute',
+                url : 'https://route.api.here.com/routing/7.2/calculateroute.json',
                 type : 'GET',
                 data : {
                     'app_id': 'q68gRNG9rPpTxQaxg1V9',
                     'app_code': '7_c59N78SaUc6fdI4NSR6w',
+                    'mode' : 'fastest; pedestrian',
                     routingParameters
                 },
-                dataType: 'json',
                 //The response from the server
                 'success' : function(data) {
                     //You can use any jQuery/JavaScript here!!!
@@ -175,7 +176,7 @@ function render(numberNodes, distanceParameter){
                     }
                 }
             });
-
+*/
         }
     };
 

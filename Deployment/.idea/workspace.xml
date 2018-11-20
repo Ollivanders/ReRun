@@ -2,80 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e481f002-1e58-49a6-bd2a-656b0eb01c69" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/.travis.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/css/grayscale.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/gulpfile.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/img/intro-bg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/img/map-marker.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/js/grayscale.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/bootstrap/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/bootstrap/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/bootstrap/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/bootstrap/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/bootstrap/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/bootstrap/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/bootstrap/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/bootstrap/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/bootstrap/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/bootstrap/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/css/font-awesome.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/css/font-awesome.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/fonts/FontAwesome.otf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/fonts/fontawesome-webfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/fonts/fontawesome-webfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/fonts/fontawesome-webfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/fonts/fontawesome-webfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/fonts/fontawesome-webfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/less/animated.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/less/bordered-pulled.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/less/core.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/less/fixed-width.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/less/font-awesome.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/less/icons.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/less/larger.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/less/list.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/less/mixins.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/less/path.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/less/rotated-flipped.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/less/screen-reader.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/less/stacked.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/less/variables.less" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/scss/_animated.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/scss/_bordered-pulled.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/scss/_core.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/scss/_fixed-width.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/scss/_icons.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/scss/_larger.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/scss/_list.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/scss/_mixins.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/scss/_path.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/scss/_rotated-flipped.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/scss/_screen-reader.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/scss/_stacked.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/scss/_variables.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/font-awesome/scss/font-awesome.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/jquery-easing/jquery.easing.compatibility.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/jquery-easing/jquery.easing.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/jquery-easing/jquery.easing.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/jquery/jquery.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/Grayscale/vendor/jquery/jquery.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/bootstrap-spinner.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/index1.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/jquery.spinner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/js/client2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/js/client3.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Deploy/js/client4.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Deploy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Deploy/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Deploy/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../Deploy/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Deploy/js/mapDisplay.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Deploy/js/maps.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Deploy/js/routing.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Deploy/js/client.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Deploy/maps.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Deploy/routing.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Deploy/js/client.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Deploy/js/client.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Deploy/js/client2.js" beforeDir="false" afterPath="$PROJECT_DIR$/../Deploy/js/client2.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -91,7 +21,7 @@
     <session id="-220749572">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
+          <entry key="project.closed" value="3" />
           <entry key="project.open.time.12" value="2" />
           <entry key="project.open.time.7" value="1" />
           <entry key="project.opened" value="3" />
