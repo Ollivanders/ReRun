@@ -14,7 +14,7 @@
     "jquery": "^3.3.1",
     "js-cookie": "^2.2.0",
     "jsonwebtoken": "^8.1.0",
-    "moment": "^2.19.4",
+    "moment": "^2.29.4",
     "node": "^9.2.0",
     "request": "^2.83.0",
     "request-promise": "^4.2.2",
